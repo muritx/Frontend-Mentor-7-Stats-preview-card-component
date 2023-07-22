@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(233, 47%, 7%);
+    color: hsl(0, 0%, 100%);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(244, 38%, 16%);
+    width: 1110px;
+    height: 445px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 52%;
+    padding: 70px;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.title .insight {
+    color: hsl(277, 64%, 61%);
+}
+
+.text, .status {
+    padding-right: 65px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.status {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Lexend Deca', sans-serif; 
+    color: hsla(0, 0%, 100%, 0.75);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: hsl(0, 0%, 100%);
+}
+
+.right {
+    display: flex;
+    width: 48%;
+    background-image: url("images/image-header-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.right::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 81%, 35%, 0.5);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 768px) {
+    
+    .container {
+        width: 85%;
+        height: 85%;
+        flex-direction: column;
+    }
+
+    .left {
+        order: 2;
+        padding: 15px;
+        width: 100%;
+        height: 65%;
+        justify-content: space-around;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .text, .status {
+        padding-right: 0;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .status {
+        flex-direction: column;
+        margin-top: 0;
+        font-size: 8px;
+        justify-content: space-evenly;
+        height: 45%;
+    }
+
+    .numbers {
+        font-size: 16px;
+    }
+
+    .right {
+        order: 1;
+        height: 35%;
+        width: 100%;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 8px;
+      }
+
+}
